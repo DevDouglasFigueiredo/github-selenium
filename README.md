@@ -61,6 +61,13 @@ E acessando o repósitorio selecionado
 
 <img src="src/picture/repo-acessado.png" alt="img do perfil do resultado da pesquisa">
 
+E efetuando o sign out
+
+<img src="src/picture/perfil.png" alt="img do perfil do resultado da pesquisa">
+
+<img src="src/picture/logout.png" alt="img do perfil do resultado da pesquisa">
+
+
 
 ## 🛠️ Construído com
 

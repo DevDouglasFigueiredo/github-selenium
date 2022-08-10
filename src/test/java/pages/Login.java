@@ -46,6 +46,10 @@ public class Login {
 
     }
 
+    public void aguardarElementoAparecer() throws InterruptedException {
+        Thread.sleep(2500);
+    }
+
 
 }
 

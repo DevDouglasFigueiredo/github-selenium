@@ -31,4 +31,8 @@ Funcionalidade: Tela de login
     E no projeto escolhido
     Entao devo ter acesso ao repositorio escolhido
 
-
+  Cenário: Efetuando logout
+    Dado que eu quero efetuar o logout da minha conta
+    Quando eu clicar no perfil
+    E clicar em sign out
+    Então devo ter realizado o logout da minha conta

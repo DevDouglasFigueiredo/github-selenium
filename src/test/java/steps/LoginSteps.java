@@ -92,9 +92,9 @@ public class LoginSteps extends RunCucumberTest {
     }
 
     @Quando("^no projeto escolhido$")
-    public void no_projeto_escolhido() {
+    public void no_projeto_escolhido() throws InterruptedException {
         driver.findElement(By.cssSelector("#user-repositories-list > ul > li > div > div > h3 > a")).click();
-
+        login.aguardarElementoAparecer();
     }
 
     @Entao("^devo ter acesso ao repositorio escolhido$")
@@ -103,5 +103,27 @@ public class LoginSteps extends RunCucumberTest {
 
     }
 
+    @Dado("^que eu quero efetuar o logout da minha conta$")
+    public void que_eu_quero_efetuar_o_logout_da_minha_conta()  {
+        System.out.println("efetuando logout");
+    }
+
+    @Quando("^eu clicar no perfil$")
+    public void eu_clicar_no_perfil()  {
+        driver.findElement(By.className("avatar-small")).click();
+
+    }
+
+    @Quando("^clicar em sign out$")
+    public void clicar_em_sign_out()  {
+        driver.findElement(By.className("dropdown-signout")).click();
+    }
+
+    @Então("^devo ter realizado o logout da minha conta$")
+    public void devo_ter_realizado_o_logout_da_minha_conta()  {
+        System.out.println("logout realiazado");
+    }
+
 }
+
 
