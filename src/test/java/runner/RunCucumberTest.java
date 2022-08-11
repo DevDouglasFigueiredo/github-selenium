@@ -17,15 +17,7 @@ import java.util.concurrent.TimeUnit;
         glue = {"steps"}
 )
 public
-class RunCucumberTest {
-
-    public static WebDriver driver;
-
-    @BeforeClass
-    public static void start(){
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    }
+class RunCucumberTest extends RunBase{
 
     @AfterClass
     public static void stop(){

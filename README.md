@@ -18,6 +18,7 @@ Java
 corretto-1.8 Amazon Corretto version 1.8.0_342
 Selenium
 ChromeDriver
+FireFox
 IDE de sua preferencia ( como sugestão eu indico a IntelliJ)
 ```
 
@@ -25,48 +26,24 @@ IDE de sua preferencia ( como sugestão eu indico a IntelliJ)
 
 Após ter baixado os pré-requistos, instale todos os arquivos!<br>
 <br>
-Coloque o arquivo **ChromeDriver.exe** na pasta raiz do projeto <br>
+Coloque o arquivo **ChromeDriver.exe** e/ou **FireFoxDriver.exe** na pasta raiz do projeto <br>
 <br>
 Configure sua estrutura de projeto para que o **corretto-1.8** esteja ativo no SDK
 <img src="src/picture/SDK.png" alt="img do painel">
 
 ## ⚙️ Executando os testes
 
-A automação dos testes, inicia na tela de login do github com e-mail e senha previamente colocados
-no código no arquivo: <br>
-Email | LoginStep.java na linha 23 <br>
-Senha | LoginStep.java na linha 28 <br>
+Quatro Cenários:
+* Validação de Login
+* Realizando uma Busca
+* Acessando o dado Busca
+* Efetuando o logout
 
-<img src="src/picture/login.png" alt="img de login do github">
+**Para que os testes sejam executados da forma correta deve-se colocar credenciais válidas de email e senha
+previamente registrado no Github**
 
-
-Após login validado, a automação percorrerá no campo de busca, realizando uma pesquisa previamente
-colocada no código também no arquivo: <br>
-LoginStep.java na linha 48
-
-<img src="src/picture/input.png" alt="img do campo de busca preenchido">
-
-
-E Clicando no link do resultado da busca, indo para o perfil selecionado.
-
-<img src="src/picture/link.png" alt="img do link do resultado da pesquisa">
-
-<img src="src/picture/profile.png" alt="img do perfil do resultado da pesquisa">
-
-E Acessando os repósitorios do perfil
-
-<img src="src/picture/repositories.png" alt="img do perfil do resultado da pesquisa">
-
-E acessando o repósitorio selecionado
-
-<img src="src/picture/repo-acessado.png" alt="img do perfil do resultado da pesquisa">
-
-E efetuando o sign out
-
-<img src="src/picture/perfil.png" alt="img do perfil do resultado da pesquisa">
-
-<img src="src/picture/logout.png" alt="img do perfil do resultado da pesquisa">
-
+No arquivo **LoginSteps** na **linha 24**, deve-se colocar o e-mail válido
+e na **linha 29** a senha válida
 
 
 ## 🛠️ Construído com

@@ -2,54 +2,37 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import runner.RunBase;
+import runner.RunCucumberTest;
+import support.Utils;
 
 
-public class Login {
+public class Login extends RunCucumberTest {
 
-    WebDriver driver ;
 
-    public Login(WebDriver driver) {
-        this.driver = driver;
+    public void acessarTelaDeLogin (){
+        getDriver(Browser.CHROME);
+        getDriver().get("https://github.com/login");
     }
 
-    public void acessarAplicacao(String url){
-        driver.get(url);
-
+    public void visualizarCampoEmail (){
+        Utils.esperarElementoEstarPresente(By.id("login_field"), 20 );
     }
 
-    public void preencherEmail(String email){
-        driver.findElement(By.id("login_field")).sendKeys(email);
+    public void preencherCampoDeEmail(String email){
+        getDriver().findElement(By.id("login_field")).sendKeys(email);
     }
 
-    public void preencherSenha(String senha){
-        driver.findElement(By.id("password")).sendKeys(senha);
-
+    public void preencherCampoDeSenha(String senha){
+        getDriver().findElement(By.id("password")).sendKeys(senha);
     }
 
-    public void acaoDeClick(){
-        driver.findElement(By.cssSelector(".js-sign-in-button")).click();
-
+    public void clicarEmSignIn(){
+        getDriver().findElement(By.cssSelector(".js-sign-in-button")).click();
     }
 
-    public void acaoDeClickNaBarraPesquisa(){
-        driver.findElement(By.cssSelector("#jump-to-suggestion-search-global > a > div > .js-jump-to-badge-search-text-global")).click();
-
+    public void acessarTelaDeUsuario (){
+        Utils.esperarElementoEstarPresente(By.id("feed-original"), 20);
     }
-
-    public void paginaDePerfilLogado (){
-        driver.get("https://github.com/");
-
-    }
-
-    public void preencherCampoDePesquisa (String nome){
-        driver.findElement(By.cssSelector(".js-site-search-focus")).sendKeys(nome);
-
-    }
-
-    public void aguardarElementoAparecer() throws InterruptedException {
-        Thread.sleep(2500);
-    }
-
 
 }
-

@@ -1,22 +1,19 @@
 # language: pt
 
-@login
+@logout
 Funcionalidade: Tela de login
 
   Como usuario do site Github
   Quero me autenticar
   Para ter acesso a minha conta de usuario
 
-  @loginSucesso
-  Cenário: Validar credenciais de login
+  @logoutSucesso
+  Cenário: Efetuando logout
     Dado que acesso o site do github
     E visualizo o campo email
     E preencho meu email valido
     E a senha valida
-    Quando clico no botao
-    Entao sou redirecionado para tela de usuario
-
-
-
-
-
+    E clico no botao
+    E sou redirecionado para tela de usuario
+    Quando clico no botão para logout
+    Entao sou direcionado para tela principal do site sem usuário logado

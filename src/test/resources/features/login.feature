@@ -1,38 +1,22 @@
 # language: pt
 
+@login
 Funcionalidade: Tela de login
 
   Como usuario do site Github
   Quero me autenticar
-  Para visualizar meus repositórios e realizar pesquisas
+  Para ter acesso a minha conta de usuario
 
+  @loginSucesso
   Cenário: Validar credenciais de login
-    Dado que estou no site do github
-    Quando preencho meu email
-    E a senha
-    E clico no botao
-    Então devo ser redirecionado para a tela de dashboard do github
+    Dado que acesso o site do github
+    E visualizo o campo email
+    E preencho meu email valido
+    E a senha valida
+    Quando clico no botao
+    Entao sou redirecionado para tela de usuario
 
-  Cenário: Realizar uma busca no campo de pesquisa
-    Dado que estou logado
-    E quero realizar uma busca
-    Quando eu preencher o campo de busca
-    Então o resultado da minha pesquisa deve aparecer
 
-  Cenário: Acessar o perfil da pesquisa
-    Dado que eu tenho o resultado da pesquisa
-    Quando clicar no link obtido
-    E clicar para acessar o perfil da busca
-    Então tenho acesso ao perfil pesquisado
 
-  Cenário: Acessando link do Repositorio
-    Dado que eu quero acessar os repositorios da pesquisa realizada
-    Quando clicar em repositorios
-    E no projeto escolhido
-    Entao devo ter acesso ao repositorio escolhido
 
-  Cenário: Efetuando logout
-    Dado que eu quero efetuar o logout da minha conta
-    Quando eu clicar no perfil
-    E clicar em sign out
-    Então devo ter realizado o logout da minha conta
+
