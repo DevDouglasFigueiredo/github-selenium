@@ -21,12 +21,12 @@ public class LoginSteps extends RunCucumberTest {
 
     @Dado("^preencho meu email valido$")
     public void preencho_meu_email_valido()  {
-        login.preencherCampoDeEmail("suportedsmix@gmail.com");
+        login.preencherCampoDeEmail("");
     }
 
     @Dado("^a senha valida$")
     public void a_senha_valida() {
-        login.preencherCampoDeSenha("Suporte12345");
+        login.preencherCampoDeSenha("");
     }
 
     @Quando("^clico no botao$")
